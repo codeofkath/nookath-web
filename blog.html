@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="icon" href="assets/favicon-2.png">
+    <link rel="stylesheet" href="reset.css" media="all" />
+    <link rel="stylesheet" href="styles-common.css" media="all" />
+    <link rel="stylesheet" href="effects.css">
+
+    <link rel="stylesheet" href="blog.css">
+
+</head>
+
+<body class="lines">
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo-nav"><a href="index.html"><img src="assets/Logo.svg" width="80"></a></div>
+                <div class="links-nav">
+                    <ul class="nav-list">
+                        <li><a class="pag-nav" href="notes.html">Notas</a></li>
+                        <li><a class="pag-nav" href="blog.html">Blog</a></li>
+                        <li><a class="pag-nav" href="me.html">Sobre mí</a></li>
+                    </ul>
+                </div>
+                <span id="time-wid">...</span>
+            </nav>
+        </div>
+    </header>
+
+
+
+
+    <main class="main-flex margin-nav">
+        <div class="container">
+
+            <h1 class="p-tittle">Blog</h1>
+
+            <div class="blog-index">
+
+                <div class="blg-colum1">
+
+                    <div class="blg-dscp">
+                        <p class="t-sm c-2">En esta parte de la página me gusta hablar de temas variados, postear
+                            opiniones, siéntete libre de explorar.</p>
+                    </div>
+
+                    <div class="blg-categories flex-c">
+
+                        <p class="nfpx-tl">Estas en</p>
+
+                        <div class="active-ctg">
+                            <div class="ctg-count">
+                                <p class="nfpx-bs">Todas</p>
+                                <p class="nfpx-bs">0</p>
+                            </div>
+                            <p class="dscp c-2">Aquí encontraras todas las entradas del blog</p>
+                        </div>
+
+                        <p class="nfpx-tl">Categorias</p>
+
+                        <ul>
+                            <li class="nfpx-bs"><a href="" class="a-none a-nrml">Todas</a></li>
+                            <li class="nfpx-bs"><a href="" class="a-none a-nrml">Todas</a></li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+                <div class="blg-colum2 flex-c">
+
+                    <ul class="ul-style-none flex-c">
+
+                        <li>
+                            <article class="blog-entry flex-c">
+                                <h2 class="h3"><a href="" class="a-none">Stop generating, start thinking</a></h2>
+                                <p class="bd-summary t-sm c-2">Over four years ago, we launched Purpose Talent with a
+                                    mission to connect people with work that matters. Over four years ago, we launched
+                                    Purpose Talent with a mission to connect people with work that matters. Over four
+                                    years ago, we launched Purpose Talent with a mission to connect people with work
+                                    that matters.</p>
+                                <div class="date"><time datetime="2026-02-28" class="c-2"><b>28 de febrero</b></time><a
+                                        href="">Continuar leyendo</a></div>
+                            </article>
+                        </li>
+
+
+
+                    </ul>
+
+
+                    <div class="empty-b">
+                        <span class="nfpx-bs">Aun no hay entradas aquí</span>
+                    </div>
+
+                    <div class="load-m">
+                        <a href="" class="ants"><span class="t-md c-2">← Anterior</span> </a>
+                        <a href="" class="dsp"><span class="t-md c-2">Siguiente →</span></a>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+    </main>
+
+
+
+
+    <footer>
+        <div class="container t-xs c-3"><span>Nookath ♡ <span id="year">2026</span></span></div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/scripts/time-script.js"></script>
+
+    <script>
+        // Busca el elemento con el id "year" y le pone el año actual
+        document.getElementById('year').innerText = new Date().getFullYear();
+    </script>
+
+
+</body>
+
+</html>

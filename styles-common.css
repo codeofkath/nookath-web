@@ -1,0 +1,623 @@
+/* ----- FONTS ----- */
+
+@font-face {
+    font-family: 'Bonance';
+    src: url('assets/fonts/Bonbance-BoldCondensed.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url('assets/fonts/Inter-Variable.ttf') format('truetype');
+    font-weight: 100 900;
+    /* Define el rango que soporta la fuente */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url('assets/fonts/Inter-Italic-Variable.ttf') format('truetype');
+    font-weight: 100 900;
+    /* Define el rango que soporta la fuente */
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'NF Pixels';
+    src: url('assets/fonts/NFPixels-Regular.ttf') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+/* ----- VARIABLES ----- */
+:root {
+    /* Ancho maximo*/
+    --max-width: 1150px;
+
+    /* Colores */
+    --bckg-color: #F7E9DF;
+    --c-1: #161515;
+    --c-2: #4A4745;
+    --c-3: #B2ABA6;
+    --c-3-2: color-mix(in srgb, var(--c-3) 100%, var(--c-2) 50%);
+    --c-4: #E6DCD6;
+
+    /* Fuentes */
+    --font-1: "Inter", sans-serif;
+    --font-2: 'Bonance';
+    --font-3: 'NF Pixels';
+
+    /* Tamaño textos / la base es 18px, por lo cual 1rem = 18px*/
+    --xl: clamp(2.25rem, 1.6875rem + 2.5vw, 3.625rem);
+    --lg: clamp(1.75rem, 1.1875rem + 2.5vw, 3.125rem);
+    --md: clamp(1.375rem, 1.4rem + 0.5vw, 2.25rem);
+    --bs: clamp(0.875rem, 0.7727rem + 0.2vw, 1.125rem);
+    --sm: clamp(0.72rem, 0.75rem + 0.11vw, 0.97rem);
+    --xs: clamp(0.64rem, 0.68rem + 0.1vw, 0.875rem);
+
+    /*Texturas*/
+    --gl: radial-gradient(circle 1px at 0px 0px, color-mix(in srgb, var(--c-3), transparent 40%) 1px, transparent 0);
+    --gd: radial-gradient(circle 1px at 0px 0px, transparent 1px, transparent 0);
+    --bg-1: var(--gl) 0px 0px / 4px 4px, transparent;
+    --bg-2: var(--gl) 0px 0px / 4px 4px, var(--gl) 2px 2px / 4px 4px, transparent;
+}
+
+
+/* --- BASES --- */
+html {
+    font-size: 16px;
+    font-family: var(--font-1);
+    color: var(--c-1);
+
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--bckg-color);
+    position: relative;
+    font-size: var(--bs);
+    padding: 0 6%;
+
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(assets/bckg.jpg);
+    background-color: var(--bckg-color);
+    background-size: 30%;
+    background-blend-mode: darken;
+    opacity: 0.4;
+    z-index: -10;
+}
+
+header {
+    margin-top: 4.8%;
+}
+
+main {
+    opacity: 0;
+    animation: fadeIn 400ms ease-in forwards;
+    will-change: transform, opacity;
+    transform: translateZ(0);
+
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+.main-flex {
+    flex: 1;
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hidde {
+    display: none !important;
+}
+
+
+/* UTILIDADES En esta parte van clases de CSS que aplican a varios elementos */
+
+/* U:Colores texto */
+
+.c-1 {
+    color: var(--c-1);
+}
+
+.c-2 {
+    color: var(--c-2);
+}
+
+.c-3 {
+    color: var(--c-3);
+}
+
+.c-3-2 {
+    color: var(--c-3-2);
+}
+
+
+.c-4 {
+    color: var(--c-4);
+}
+
+.c-bckg {
+    color: var(--bckg-color);
+}
+
+
+/* U:Colores fondo */
+
+.bc-1 {
+    background-color: var(--c-1);
+}
+
+.bc-2 {
+    background-color: var(--c-2);
+}
+
+.bc-3 {
+    background-color: var(--c-3);
+}
+
+.bc-4 {
+    background-color: var(--c-4);
+}
+
+.bc-or {
+    background-color: var(--bckg-color);
+}
+
+
+/* U:Headings y parrafos*/
+
+h1,
+.h1 {
+    font-family: var(--font-2);
+    font-size: var(--xl);
+    line-height: 1.1;
+}
+
+h2,
+.h2 {
+    font-family: var(--font-2);
+    font-size: var(--lg);
+    line-height: 1.12;
+}
+
+h3,
+.h3 {
+    font-family: var(--font-2);
+    font-size: var(--md);
+    line-height: 1.18;
+}
+
+.t-md {
+    font-family: var(--font-1);
+    font-size: calc(var(--bs) + .1rem);
+    line-height: 1.44;
+}
+
+.t-bs {
+    font-family: var(--font-1);
+    font-size: var(--bs);
+    line-height: 1.44;
+}
+
+.t-sm {
+    font-family: var(--font-1);
+    font-size: var(--sm);
+    line-height: 1.25;
+}
+
+.t-xs {
+    font-family: var(--font-1);
+    font-size: var(--xs);
+    line-height: 1.25;
+}
+
+
+/* U:Estilos con fuente Pixel*/
+.nfpx-bs {
+    font-family: var(--font-3);
+    /* font-size: 1.1rem; */
+    font-size: clamp(0.9rem, 0.3rem + .3vw, 1.3rem);
+    line-height: 1;
+}
+
+.nfpx-tl {
+    font-family: var(--font-3);
+    /* font-size: 1.3rem; */
+    font-size: clamp(0.9rem, 1.1rem + 0.2vw, 1.3rem);
+    line-height: 1;
+    font-weight: normal;
+    -webkit-text-stroke: 0.02rem;
+}
+
+.nfpx-sm {
+    font-family: var(--font-3);
+    /* font-size: 1rem; */
+    font-size: clamp(0.8rem, 0.9rem + 0.07vw, 1.1rem);
+    line-height: 1;
+}
+
+.nfpx-xxs {
+    font-family: var(--font-3);
+    font-size: clamp(0.78rem, 0.8rem + 0.12vw, 0.97rem);;
+    line-height: 1;
+}
+
+.nfpx-bs,
+.nfpx-tl,
+.nfpx-sm {
+    letter-spacing: 0.05rem;
+}
+
+/* U:Listas y links*/
+
+a,
+a:link,
+a:visited,
+a:hover.a:active {
+    text-decoration: underline;
+    color: var(--c-1);
+    font-weight: 600;
+}
+
+.a-none {
+    text-decoration: none !important;
+}
+
+.a-nrml {
+    font-weight: normal !important;
+    ;
+}
+
+/*U:Listas*/
+
+.ul-stlye1 {
+    list-style-image: url('assets/icons/list-1.png');
+    margin: 0.5rem 0;
+    margin-left: 0.3rem;
+    font-weight: 500;
+}
+
+.ul-stlye2 {
+    list-style-image: url('assets/icons/list-2.gif');
+    margin: 0.2rem 0;
+    margin-left: 0.3rem;
+    padding: 0;
+    padding-left: 1rem;
+    font-weight: 500;
+}
+
+.ul-style-none {
+    list-style: none;
+    list-style-image: none;
+    padding: 0;
+}
+
+li {
+    padding: 0.2rem 0;
+}
+
+
+/* U:Orden y, margenes, otros*/
+
+.sidetoside {
+    /* Elementos uno al lado del otro*/
+    display: flex;
+    flex-direction: row;
+    gap: 0.7rem;
+}
+
+.flex-c {
+    /* Propiedad flex en columna*/
+    display: flex;
+    flex-direction: column;
+}
+
+/*U:Margenes*/
+
+.margin-nav {
+    margin-top: 9vh;
+    margin-bottom: 7vh;
+}
+
+.margin-h {
+    margin-top: 1rem;
+}
+
+
+.p-tittle {
+    margin-bottom: 3%;
+}
+
+.bd-summary {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* U:Botones (Propiedades y estilos por cada boton)*/
+
+
+.bttn-prop {
+    width: fit-content;
+    background-color: transparent;
+    padding: 0 4px 4px 0;
+    border-top: 0;
+    border-left: 0;
+    border-right: 2px solid var(--c-2);
+    border-bottom: 2px solid var(--c-2);
+    border-radius: 0;
+    border-bottom-right-radius: 4px;
+    text-decoration: none !important
+}
+
+.bttn-prop div {
+    padding: 3px 11px;
+    border-radius: 4px;
+    border: 2px solid var(--c-1);
+    font-family: var(--font-3);
+    font-size: var(--bs);
+    letter-spacing: 3%;
+    font-weight: normal;
+}
+
+.bttn-style1 div {
+    background-color: var(--bckg-color);
+    color: var(--c-1)
+}
+
+.bttn-style2 div {
+    background-color: var(--c-2);
+    color: var(--c-4)
+}
+
+.bttn-style3 div {
+    background-color: var(--c-3);
+    color: var(--c-1)
+}
+
+
+/* --BARRA NAVEGACIÓN--*/
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-nav{
+    width: 7.2%;
+    min-width: 60px;
+}
+
+nav ul {
+    list-style-type: none;
+    list-style-image: none;
+}
+
+#time-wid {
+    font-family: var(--font-2);
+    font-size: var(--md);
+    color: var(--c-2);
+}
+
+
+/* Lista en barra de navegacion*/
+
+.pag-nav {
+    text-decoration: none !important;
+    text-transform: lowercase;
+    font-family: var(--font-2);
+    font-size: var(--md);
+    line-height: 1.18;
+    transition: 0.3s;
+}
+
+.pag-nav:hover {
+    color: var(--c-2);
+}
+
+.links-nav{
+    flex-grow: 1;
+}
+
+.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 6%;
+}
+
+
+/* --FOOTER--*/
+
+footer {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    padding-top: 2vh;
+    padding-bottom: 4vh;
+}
+
+
+/* --PESTAÑA RECUADRO DIARIO-- */
+
+.triangle {
+    /*Recuerda como nos hizo sufrir este triangulo*/
+
+    --b: 2px;
+
+    width: 60px;
+    aspect-ratio: 1;
+    clip-path: polygon(0 100%, 0 0, 100% 100%, 0 100%, var(--b) calc(100% - var(--b)), calc(100% - var(--b)/tan(22.5deg)) calc(100% - var(--b)), var(--b) calc(var(--b)/tan(22.5deg)), var(--b) calc(100% - var(--b)));
+    background: var(--c-3);
+
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    z-index: 1;
+}
+
+
+
+/* --Imagenes blog y diario-- */
+
+
+.blog-img-w1 {
+    max-width: 100%;
+    align-self: center;
+    margin: 1.6rem auto;
+    text-align: center;
+}
+
+@media (min-width: 1150px) {
+    .blog-img-w1 {
+        max-width: 75%;
+    }
+}
+
+
+.border-img {
+    background-image: repeating-linear-gradient(90deg, #b2aba6, #b2aba6 10px, transparent 10px, transparent 20px), repeating-linear-gradient(180deg, #b2aba6, #b2aba6 10px, transparent 10px, transparent 20px), repeating-linear-gradient(90deg, #b2aba6, #b2aba6 10px, transparent 10px, transparent 20px), repeating-linear-gradient(180deg, #b2aba6, #b2aba6 10px, transparent 10px, transparent 20px);
+    background-position: left top, right top, left bottom, left top;
+    background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
+    background-size: 100% 1px, 1px 100%, 100% 1px, 1px 100%;
+    padding: 0.625rem;
+
+}
+
+.img-blog-1 {
+    aspect-ratio: 7 / 4;
+    overflow: hidden;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--c-4);
+}
+
+
+.img-blog-1 img {
+    width: 100%;
+    overflow: hidden;
+    filter: brightness(0.92);
+}
+
+
+/* --Contenedor para contenido vacido--*/
+
+.empty-b {
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: color-mix(in srgb, var(--c-3) 100%, var(--c-2) 30%);
+
+
+    border: 1px dashed color-mix(in srgb, var(--c-3), transparent 15%);
+    background-color: color-mix(in srgb, var(--c-4), transparent 85%);
+    border-radius: 4px;
+    flex-grow: 1;
+}
+
+
+/* --SCROLLBARS--*/
+
+/* Chrome, Edge, Safari */
+
+.activities::-webkit-scrollbar,
+.overflow-nookbits::-webkit-scrollbar {
+    width: 5px;
+    height: 20px;
+}
+
+.activities::-webkit-scrollbar-track,
+.overflow-nookbits::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.activities::-webkit-scrollbar-thumb,
+.overflow-nookbits::-webkit-scrollbar-thumb {
+    background: color-mix(in srgb, var(--c-2), transparent 80%);
+    border: 1px solid var(--bckg-color);
+    border-radius: 4px;
+}
+
+.activities::-webkit-scrollbar-thumb:hover,
+.overflow-nookbits::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a7;
+}
+
+@supports (-moz-appearance: none) {
+
+    /* Este código solo se ejecutará en Firefox */
+    .activities,
+    .overflow-nookbits {
+        /* Firefox */
+        scrollbar-width: thin;
+        scrollbar-color: #9c938a #e7dfd7;
+    }
+}
+
+
+/* Ocultar h1 */
+.sr-only {
+    position: absolute;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+    header{
+        margin-top: 12%;
+    }
+
+}
+
+@media (max-width: 400px){
+    .sec1{
+    height: 80vh;}
+}

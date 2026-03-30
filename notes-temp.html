@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titulo nota</title>
+    <link rel="icon" href="assets/favicon-2.png">
+    <link rel="stylesheet" href="reset.css" media="all" />
+    <link rel="stylesheet" href="styles-common.css" media="all" />
+    <link rel="stylesheet" href="effects.css">
+
+    <link rel="stylesheet" href="notes-individual.css">
+
+</head>
+
+<body class="lines">
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo-nav"><a href="index.html"><img src="assets/Logo.svg" width="80"></a></div>
+                <div class="links-nav">
+                    <ul class="nav-list">
+                        <li><a class="pag-nav" href="notes.html">Notas</a></li>
+                        <li><a class="pag-nav" href="blog.html">Blog</a></li>
+                        <li><a class="pag-nav" href="me.html">Sobre mí</a></li>
+                    </ul>
+                </div>
+                <span id="time-wid">...</span>
+            </nav>
+        </div>
+    </header>
+
+
+    <main class="main-flex margin-nav">
+        <div class="container">
+
+            <article class="note-indv flex-c">
+
+                <div class="triangle"></div>
+
+                <div class="note-data">
+                    <h1 class="h2">Titulo nota</h1>
+                    <time datetime="2026-02-28" class="h3 date c-3">8 de febrero</time>
+                </div>
+
+                <div class="content-note flex-c">
+
+                    <p>Over four years ago, we launched Purpose Talent with a mission to connect
+                        people with work that matters. Sounds simple, right? But here's what we've
+                        learned: there's a world of difference between saying you're mission-driven
+                        and actually incorporating it into the way you work and the team you build.
+
+                    <div class="blog-img-w1 flex-c">
+                        <div class="border-img">
+                            <div class="img-blog-1"><img src="assets/20250826_053152398_iOS.png" alt=""></div>
+                        </div>
+                        <p class="t-xs c-3">Descripción imagen</p>
+                    </div>
+
+                    <h2 class="h3 margin-h">Un subtitulo no puede ser tan largo ¿o si?</h2>
+
+                    <p>We've had the privilege of working with dozens of companies – from scrappy startups
+                        to global marketplaces to high-impact nonprofits – and each one has taught us something
+                        valuable. The biggest lesson? While 'mission-driven' gets thrown around a lot, we've
+                        learned that real purpose is deeper—it's about people finding their perfect rhythm
+                        in ways that helps them be the best version of themselves.</p>
+
+                    <p>Over four years ago, we launched Purpose Talent with a mission to connect people with
+                        work that matters. Sounds simple, right?</p>
+
+                    <ul class="ul-stlye1">
+                        <li>Better to <b>not</b> look for it</li>
+                        <li>Try to do better things</li>
+                        <li>Claim your knowledgment</li>
+                    </ul>
+
+                    <p>But here's what we've learned: there's a world of difference between saying you're
+                        mission-driven and actually incorporating it into the way you work and the team you build.</p>
+
+                    <p>While 'mission-driven' gets thrown around a lot, we've learned that real purpose is deeper—it's
+                        about people finding their perfect rhythm in ways that helps them be the best version of
+                        themselves.</p>
+                </div>
+
+                <div class="notes-n">
+                    <div class="note-1"><span class="nfpx-xxs title">Notas</span>
+                        <span class="nfpx-xxs notes">
+                            <ul class="ul-style-none">
+                                <li>Aun seguimos avanzando :)</li>
+                                <li>Me ha costado bastante la verdad</li>
+                                <li>here's what we've learned: there's a world of difference between</li>
+                            </ul>
+                        </span>
+                    </div>
+
+                    <div class="mood-d"> <img src="" alt="" width=""> </div>
+                </div>
+
+                <a href="" class="goback a-nrml a-none">
+                    <div class="nfpx-xxs">← Volver al diario</div>
+                </a>
+
+            </article>
+
+
+
+        </div>
+    </main>
+
+
+
+    <footer>
+        <div class="container t-xs c-3"><span>Nookath ♡ <span id="year">2026</span></span></div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/scripts/time-script.js"></script>
+
+    <script>
+        // Busca el elemento con el id "year" y le pone el año actual
+        document.getElementById('year').innerText = new Date().getFullYear();
+    </script>
+
+
+</body>
+
+</html>

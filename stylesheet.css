@@ -1,0 +1,168 @@
+:root{
+--sl: radial-gradient(circle 1px at 0px 0px, darkblue 1px, transparent 0);
+
+  --sg-0: transparent;
+  --sg-1: var(--sl) 0px 0px / 4px 4px, transparent;
+  --sg-2: var(--sl) 0px 0px / 4px 4px, var(--sl) 2px 2px / 4px 4px, transparent;
+  --sg-3: var(--sl) 0px 0px / 2px 2px, transparent;
+  --sg-4: var(--sl) 0px 0px / 2px 2px, var(--sl) 1px 1px / 2px 2px, transparent;
+  --sg-5: darkblue;
+
+}
+
+.styles-sheet{
+    background-color: white;
+}
+
+.style-sheet body{
+    background-color: white!important;
+
+}
+
+
+body{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+
+}
+
+.colors{
+    display: flex;
+    flex-direction: row;
+}
+
+.text{
+    font-family: "Inter";
+    font-weight: 800;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: var(--c-2);
+}
+
+.colorstyle{
+    display: flex;
+    width: 70px;
+    height: 70px;
+    margin: 10px 25px 10px 0px;
+    justify-content: center;
+    align-items: center;
+}
+
+.b-texts{
+    display: flex;
+    flex-direction: row;
+    gap: 4%;
+}
+
+.headings{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.texts{
+    width: 50%;
+}
+
+.estilo-nav{
+    width: fit-content;
+    border: 2px dashed var(--c-3);
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding: 1rem;
+}
+
+.estilo-nav .text{
+    margin: 0;
+    margin-bottom: 0.5rem;
+}
+
+button{
+    margin-right: 20px;
+}
+
+
+.shades {
+  display: inline-flex;
+  gap: 1rem;
+}
+
+.shade {
+  height: 40px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  border: 3px solid var(--dark);
+
+  
+
+
+  
+  &:nth-child(1) { background: var(--sg-0); }
+  &:nth-child(2) { background: var(--sg-1); }
+  &:nth-child(3) { background: var(--sg-2); }
+  &:nth-child(4) { background: var(--sg-3); }
+  &:nth-child(5) { background: var(--sg-4); }
+  &:nth-child(6) { background: var(--sg-5); }
+
+}
+
+
+
+
+
+.transition-prueba{
+    width: 110%;
+    height: 110%;
+    position: absolute;
+    top: -5%;
+    margin-left: -5%;
+    
+
+    &::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: inherit;
+        height: inherit;
+        text-align: center;
+        
+    }
+}
+
+.transition-prueba::after{
+    animation: prueba2 500ms ease-out forwards;
+    transition: 2s;
+    color: white;
+}
+
+.transition-prueba:hover::after{
+    content: "hola";
+    animation: prueba1 500ms linear;
+    animation-fill-mode: forwards;}
+
+
+@keyframes prueba1 {
+    0% { background: var(--sg-0); }
+    20% { background: var(--sg-1); }
+    40% { background: var(--sg-2); }
+    60% { background: var(--sg-3); }
+    80% { background: var(--sg-4); }
+    100% { background: var(--sg-5)}
+}
+
+@keyframes prueba2 {
+    0% { background: var(--sg-5)}
+    20% { background: var(--sg-4); }
+    40% { background: var(--sg-3); }
+    60% { background: var(--sg-1); }
+    80% { background: var(--sg-2); }
+    100% { background: var(--sg-0); }
+}
+
+
+
+
+

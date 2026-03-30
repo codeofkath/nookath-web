@@ -1,0 +1,107 @@
+.margin-nav {
+    margin-bottom: 0;
+}
+
+.about {
+    width: clamp(300px, 90%, 900px);
+    gap: 2.3rem;
+}
+
+.ab1 {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.profile-img {
+    width: 11rem;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--c-4);
+    border: 1px solid var(--c-3);
+    border-radius: 0.5rem;
+}
+
+.ab-txts {
+    width: 74%;
+    gap: 0.6rem;
+    justify-content: center;
+}
+
+.ab-title {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.ab-title .sp1 {
+    font-size: 1.7rem;
+    line-height: 0.8;
+    color: var(--c-2);
+}
+
+.ab-title .sp2 {
+    -webkit-text-stroke: 3px var(--c-3);
+    paint-order: stroke fill;
+    line-height: 1;
+}
+
+.ab2 {
+    column-count: 3;
+    column-gap: 2.2rem;
+}
+
+.a-row {
+    border-right: 1px solid var(--c-3);
+}
+
+.a-row:last-child {
+    border-right: none;
+}
+
+.a-row .t-bs {
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.ab3 {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1.5rem;
+}
+
+.ab-web {
+    gap: 0.9rem;
+    width: 55%;
+}
+
+.ab-web h3 {
+    font-size: calc(var(--md) - 0.10rem);
+    line-height: 0.6;
+}
+
+.ab-web .bttn-prop div {
+    font-size: var(--sm);
+
+}
+
+.ab-cat {
+    width: 11rem;
+    height: fit-content;
+    background-color: color-mix(in srgb, var(--c-3), transparent 60%);
+    border: 1px solid var(--c-3);
+    border-radius: 4px;
+    padding: 0.3rem 0.6rem;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.ab-cat {
+    font-size: 0.9rem;
+
+}

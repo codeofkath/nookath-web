@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notas</title>
+    <link rel="icon" href="assets/favicon-2.png">
+    <link rel="stylesheet" href="reset.css" media="all" />
+    <link rel="stylesheet" href="styles-common.css" media="all" />
+    <link rel="stylesheet" href="effects.css">
+    <link rel="stylesheet" href="notes.css">
+
+
+</head>
+
+<body class="lines">
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo-nav"><a href="index.html"><img src="assets/Logo.svg" width="80"></a></div>
+                <div class="links-nav">
+                    <ul class="nav-list">
+                        <li><a class="pag-nav" href="notes.html">Notas</a></li>
+                        <li><a class="pag-nav" href="blog.html">Blog</a></li>
+                        <li><a class="pag-nav" href="me.html">Sobre mí</a></li>
+                    </ul>
+                </div>
+                <span id="time-wid">...</span>
+            </nav>
+        </div>
+    </header>
+
+
+
+
+    <main class="main-flex margin-nav">
+        <div class="container">
+
+            <div class="notes flex-c">
+
+                <div class="notes-tabs">
+                    <div class="tab-s1"></div>
+                    <div class="tabs2">
+                        <div class="tab-s2 in1"></div>
+                        <div class="tab-s2 in2"></div>
+                        <div class="tab-s2 in3"></div>
+                    </div>
+                </div>
+
+                <div class="notes-index flex-c">
+
+                    <div class="header-notes">
+                        <h1 class="p-not-tittle">Notas</h1>
+                        <p class="p-desc t-sm c-2">Aquí hablo de mis proyectos personales, herramientas que estoy
+                            explorando, algunas ideas, pensamientos y actualizaciones. Es mi <i>diario de
+                                creatividad</i>.</p>
+                    </div>
+
+
+                    <ul class="ul-style-none notes-content flex-c">
+
+                        <li class="note-entry">
+                            <article class="flex-c">
+                                <div class="tnd">
+                                    <h2 class="h3"><a href="">Titulo entrada</a></h2><time datetime="2026-02-28"
+                                        class="date  t-sm c-2">(día) (mes)</time>
+                                </div>
+                                <p class="t-sm c-2 bd-summary">Texto resumido de la entrada</a>
+                            </article>
+                        </li>
+
+                    </ul>
+
+                    <div class="empty-b">
+                        <span class="nfpx-bs">Aun no hay entradas aquí</span>
+                    </div>
+
+
+                    <div class="load-m">
+                        <a href="" class="ants"><span class="t-md c-2 ant">Anterior</span></a>
+                        <a href="" class="dsp"><span class="t-md c-2 desp">Siguiente</span></a>
+                    </div>
+
+
+                    <div class="dots-container">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+    </main>
+
+
+
+    <footer>
+        <div class="container t-xs c-3"><span>Nookath ♡ <span id="year">2026</span></span></div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/scripts/time-script.js"></script>
+
+    <script>
+        // Busca el elemento con el id "year" y le pone el año actual
+        document.getElementById('year').innerText = new Date().getFullYear();
+    </script>
+
+
+</body>
+
+</html>

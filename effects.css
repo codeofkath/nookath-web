@@ -1,0 +1,175 @@
+:root{
+    
+--bl1: radial-gradient(circle 1px at 0px 0px, var(--c-1) 1px, transparent 0);
+--bd1: radial-gradient(circle 1px at 0px 0px, var(--bckg-color) 1px, transparent 0);
+--bt1-0: var(--bckg-color);
+--bt1-1: var(--bl1) 0px 0px / 4px 4px, var(--bckg-color);
+--bt1-2: var(--bl1) 0px 0px / 4px 4px, var(--gl1) 2px 2px / 4px 4px, var(--bckg-color);
+--bt1-3: var(--bl1) 0px 0px / 2px 2px, var(--bckg-color);
+--bt1-4: var(--bl1) 0px 0px / 2px 2px, var(--bl1) 1px 1px / 2px 2px, var(--bckg-color);
+--bt1-5: var(--bd1) 0px 0px / 2px 2px, var(--c-2);
+--bt1-6: var(--bd1) 0px 0px / 4px 4px, var(--bd1) 2px 2px / 4px 4px, var(--c-2);
+--bt1-7: var(--bd1) 0px 0px / 4px 4px, var(--c-2);
+--bt1-8: var(--c-2);
+
+--bl2: radial-gradient(circle 1px at 0px 0px, var(--c-3) 1px, transparent 0);
+--bd2: radial-gradient(circle 1px at 0px 0px, var(--bckg-color) 1px, transparent 0);
+--bt2-0: var(--bckg-color);
+--bt2-1: var(--bl2) 0px 0px / 4px 4px, var(--bckg-color);
+--bt2-2: var(--bl2) 0px 0px / 4px 4px, var(--bl2) 2px 2px / 4px 4px, var(--bckg-color);
+--bt2-3: var(--bl2) 0px 0px / 2px 2px, var(--bckg-color);
+--bt2-4: var(--bl2) 0px 0px / 2px 2px, var(--bl2) 1px 1px / 2px 2px, var(--bckg-color);
+--bt2-5: var(--bd2) 0px 0px / 2px 2px, var(--c-3);
+--bt2-6: var(--bd2) 0px 0px / 4px 4px, var(--bd2) 2px 2px / 4px 4px, var(--c-3);
+--bt2-7: var(--bd2) 0px 0px / 4px 4px, var(--c-3);
+--bt2-8: var(--c-3);
+
+--bl3: radial-gradient(circle 1px at 0px 0px, var(--c-1) 1px, transparent 0);
+--bd3: radial-gradient(circle 1px at 0px 0px, var(--c-3) 1px, transparent 0);
+--bt3-0: var(--c-3);
+--bt3-1: var(--bl3) 0px 0px / 4px 4px, var(--c-3);
+--bt3-2: var(--bl3) 0px 0px / 4px 4px, var(--bl3) 2px 2px / 4px 4px, var(--c-3);
+--bt3-3: var(--bl3) 0px 0px / 2px 2px, var(--c-3);
+--bt3-4: var(--bl3) 0px 0px / 2px 2px, var(--bl3) 1px 1px / 2px 2px, var(--c-3);
+--bt3-5: var(--bd3) 0px 0px / 2px 2px, var(--c-1);
+--bt3-6: var(--bd3) 0px 0px / 4px 4px, var(--bd3) 2px 2px / 4px 4px, var(--c-1);
+--bt3-7: var(--bd3) 0px 0px / 4px 4px, var(--c-1);
+--bt3-8: var(--c-1);
+}
+
+
+
+
+.lines::after{
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 999;
+
+
+    background-image: linear-gradient(rgba(217, 223, 233, .5) 60%, #000003 50%);
+    background-size: 100% 7px;
+    mix-blend-mode: overlay;
+    opacity: 0.1;
+    animation: 0.4s scanlines linear infinite;
+
+}
+
+
+ @keyframes scanlines{
+      0%{background-position: 0 0;}
+
+      100%{background-position: 0 7px;}
+    }
+
+
+.bttn-style1, .bttn-style2, .bttn-style3{
+transition: 100ms ease-out;
+    &:hover{
+        transform: translateY(-2px);
+    }
+}
+
+.bttn-style1 div{
+animation: bt1-2 300ms ease-out forwards;
+transition: 200ms ease-out;
+
+    &:hover{
+    animation: bt1-1 300ms linear forwards;
+    color: var(--bckg-color);}
+}
+
+.bttn-style2 div{
+animation: bt2-2 300ms ease-out forwards;
+transition: 200ms ease-out;
+
+    &:hover{
+    animation: bt2-1 300ms linear forwards;
+    color: var(--c-1);}
+}
+
+.bttn-style3 div{
+animation: bt3-2 100ms ease-out forwards;
+transition: 200ms ease-out;
+
+    &:hover{
+    animation: bt3-1 400ms linear forwards;
+    color: var(--c-1);}
+}
+
+
+@keyframes bt1-1 {
+  0% { background: var(--bt1-0); }
+  12.5% { background: var(--bt1-1); }
+  25% { background: var(--bt1-2); }
+  37.5% { background: var(--bt1-3); }
+  50% { background: var(--bt1-4); }
+  62.5% { background: var(--bt1-5); }
+  75% { background: var(--bt1-6); }
+  87.5% { background: var(--bt1-7); }
+  100% { background: var(--bt1-8); }
+}
+
+@keyframes bt1-2 {
+  0% { background: var(--bt1-8); }
+  12.5% { background: var(--bt1-7); }
+  25% { background: var(--bt1-6); }
+  37.5% { background: var(--bt1-5); }
+  50% { background: var(--bt1-4); }
+  62.5% { background: var(--bt1-3); }
+  75% { background: var(--bt1-2); }
+  87.5% { background: var(--bt1-1); }
+  100% { background: var(--bt1-0); }
+}
+
+@keyframes bt2-1 {
+    0% { background: var(--bt3-8); }
+    12.5% { background: var(--bt3-7); }
+    25% { background: var(--bt3-6); }
+    37.5% { background: var(--bt3-5); }
+    50% { background: var(--bt3-4); }
+    62.5% { background: var(--bt3-3); }
+    75% { background: var(--bt3-2); }
+    87.5% { background: var(--bt3-1); }
+    100% { background: var(--bt3-0); }
+}
+
+@keyframes bt2-2 {
+    0% { background: var(--bt3-0); }
+    12.5% { background: var(--bt3-1); }
+    25% { background: var(--bt3-2); }
+    37.5% { background: var(--bt3-3); }
+    50% { background: var(--bt3-4); }
+    62.5% { background: var(--bt3-5); }
+    75% { background: var(--bt3-6); }
+    87.5% { background: var(--bt3-7); }
+    100% { background: var(--bt3-8); }
+}
+
+@keyframes bt3-1 {
+  0% { background: var(--bt2-8); }
+  12.5% { background: var(--bt2-7); }
+  25% { background: var(--bt2-6); }
+  37.5% { background: var(--bt2-5); }
+  50% { background: var(--bt2-4); }
+  62.5% { background: var(--bt2-3); }
+  75% { background: var(--bt2-2); }
+  87.5% { background: var(--bt2-1); }
+  100% { background: var(--bt2-0); }
+}
+
+@keyframes bt3-2 {
+  0% { background: var(--bt2-0); }
+  12.5% { background: var(--bt2-1); }
+  25% { background: var(--bt2-2); }
+  37.5% { background: var(--bt2-3); }
+  50% { background: var(--bt2-4); }
+  62.5% { background: var(--bt2-5); }
+  75% { background: var(--bt2-6); }
+  87.5% { background: var(--bt2-7); }
+  100% { background: var(--bt2-8); }
+}
