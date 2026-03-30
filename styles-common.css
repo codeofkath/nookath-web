@@ -266,7 +266,8 @@ h3,
 
 .nfpx-xxs {
     font-family: var(--font-3);
-    font-size: clamp(0.78rem, 0.8rem + 0.12vw, 0.97rem);;
+    font-size: clamp(0.78rem, 0.8rem + 0.12vw, 0.97rem);
+    ;
     line-height: 1;
 }
 
@@ -417,7 +418,7 @@ nav {
     align-items: center;
 }
 
-.logo-nav{
+.logo-nav {
     width: 7.2%;
     min-width: 60px;
 }
@@ -449,7 +450,7 @@ nav ul {
     color: var(--c-2);
 }
 
-.links-nav{
+.links-nav {
     flex-grow: 1;
 }
 
@@ -611,13 +612,18 @@ footer {
 }
 
 @media (max-width: 900px) {
-    header{
+    header {
         margin-top: 12%;
     }
 
 }
 
-@media (max-width: 400px){
-    .sec1{
-    height: 80vh;}
+@media (max-width: 400px) {
+    .sec1 {
+        height: 80vh;
+        justify-content: space-between;
+    }
+
+
+    .ilustration {}
 }
