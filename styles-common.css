@@ -50,9 +50,9 @@
     --font-3: 'NF Pixels';
 
     /* Tamaño textos / la base es 18px, por lo cual 1rem = 16px*/
-    --xl: clamp(2.4rem, 2rem + 2vw, 3.8rem);
-    --lg: clamp(1.8rem, 1.6rem + 1vw, 2.5rem);
-    --md: clamp(1.25rem, 1.1rem + 0.6vw, 1.75rem);
+    --xl: clamp(2.4rem, 2rem + 2vw, 3.4rem);
+    --lg: clamp(1.8rem, 1.6rem + 1.2vw, 2.7rem);
+    --md: clamp(1.6rem, 1.4rem + 1.2vw, 1.8rem);
     --bs: clamp(0.9rem, 0.8rem + 0.16vw, 1.1rem);
     --sm: clamp(0.8rem, 0.78rem + 0.1vw, 0.875rem);
     --xs: clamp(0.7rem, 0.68rem + 0.05vw, 0.75rem);
@@ -67,7 +67,7 @@
 
 /* --- BASES --- */
 html {
-    font-size: 16px;
+    font-size: 15.7px;
     font-family: var(--font-1);
     color: var(--c-1);
 
