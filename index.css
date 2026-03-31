@@ -15,7 +15,7 @@
 
 
 .intro {
-    width: 84%;
+    width: 92%;
     padding: 0;
     gap: 12px;
     align-self: center;
@@ -27,13 +27,13 @@
 
 .hallo {
     color: #ADA7A6;
-    -webkit-text-stroke: 4.5px var(--c-1);
+    -webkit-text-stroke: .3rem var(--c-1);
     paint-order: stroke;
 }
 
 .soykath {
     color: #D2D2D2;
-    -webkit-text-stroke: 4.5px var(--c-1);
+    -webkit-text-stroke: .3rem var(--c-1);
     paint-order: stroke;
 }
 
@@ -625,7 +625,7 @@
     }
 
     .notes-sec {
-        padding: 7% 5% 7% 5%;
+        padding: 7% 5% 9% 5%;
     }
 
     .notes-content .bttn-prop {
@@ -639,7 +639,7 @@
     }
 
     .notes-title p {
-        width: 80%;
+        width: 90%;
     }
 
     .sec-blog {
