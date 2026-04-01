@@ -38,6 +38,8 @@ function openRespMenu() {
     menuItems.classList.add('active')
     bckgMenuList.classList.add('active')
     openButton.setAttribute('aria-expanded', 'true')
+
+    cambiarFrase();
 }
 
 function closeRespMenu() {
@@ -53,6 +55,24 @@ function closeRespMenu() {
     }, 250)
 }
 
-
-
 updateNavbar(media)
+
+const frases = [
+  "¡Qué bueno verte de nuevo!",
+  "Ser malo en algo es el primer paso para ser extrañamente bueno en algo",
+  "Hoy es un gran día para explorar.",
+  "Hecho con ❤️ para ti.",
+  "¡No te olvides de sonreír!"
+];
+
+const contenedorFrase = document.getElementById('quoteDinamic');
+
+function cambiarFrase() {
+  // Elige un índice aleatorio del array
+  const indice = Math.floor(Math.random() * frases.length);
+  // Cambia el texto del contenedor
+  contenedorFrase.textContent = frases[indice];
+}
+
+// 1. Cambiar al refrescar la página
+window.addEventListener('DOMContentLoaded', cambiarFrase);
