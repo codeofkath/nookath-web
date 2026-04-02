@@ -104,10 +104,7 @@ header {
 }
 
 main {
-  opacity: 0;
-  animation: fadeIn 400ms ease-in forwards;
-  will-change: transform, opacity;
-  transform: translateZ(0);
+  opacity: 1;
 }
 
 @keyframes fadeIn {
@@ -231,20 +228,28 @@ h3,
 }
 
 /* U:Estilos con fuente Pixel*/
+.nfpx-tl {
+  font-family: var(--font-3);
+  /* font-size: 1.3rem; */
+  font-size: clamp(1.1rem, 1.2rem + 0.2vw, 1.4rem);
+  line-height: 1;
+  font-weight: normal;
+  -webkit-text-stroke: 0.02rem;
+}
+
+.nfpx-m {
+  font-family: var(--font-3);
+  /* font-size: 1.3rem; */
+  font-size: clamp(0.9rem, 1rem + 0.08vw, 1.2rem);
+  line-height: 1;
+  font-weight: normal;
+}
+
 .nfpx-bs {
   font-family: var(--font-3);
   /* font-size: 1.1rem; */
   font-size: clamp(0.9rem, 0.3rem + 0.3vw, 1.3rem);
   line-height: 1;
-}
-
-.nfpx-tl {
-  font-family: var(--font-3);
-  /* font-size: 1.3rem; */
-  font-size: clamp(0.9rem, 1.1rem + 0.2vw, 1.3rem);
-  line-height: 1;
-  font-weight: normal;
-  -webkit-text-stroke: 0.02rem;
 }
 
 .nfpx-sm {
@@ -734,8 +739,8 @@ body.no-scroll {
   #bckgMenu {
     display: flex;
     width: 110%;
-    height: 130%;
-    top: -15%;
+    height: 100%;
+    top: 0;
     left: -5%;
     position: absolute;
     background: var(--gl) 0px 0px / 8px 8px, var(--gl) 4px 4px / 8px 8px, color-mix(in srgb, var(--c-1), transparent 40%);
@@ -749,7 +754,7 @@ body.no-scroll {
     align-items: center;
     justify-content: flex-start;
 
-    position: fixed;
+    position: absolute;
     inset: 0;
     /* top, left, bottom, right = 0 */
     z-index: 999;
@@ -818,7 +823,6 @@ body.no-scroll {
     width: 75%;
   }
 
-
   /* Líneas divisorias (Dashed) */
   .nav-list li:not(:first-child):not(:last-child)::after {
     content: "";
@@ -853,18 +857,14 @@ body.no-scroll {
     transform: rotate(2deg);
   }
 
-
 }
-
-
 
 @media (max-width: 480px) {
   .bckgNavList {
-    height: 58%;
-    max-height: 600px;
+    height: 54%;
+    max-height: 550px;
   }
 }
-
 
 @keyframes quoteTriangle {
   0% {

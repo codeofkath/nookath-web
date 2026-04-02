@@ -127,8 +127,8 @@
 
 .date {
     text-align: center;
-    background-color: color-mix(in srgb, var(--c-3), transparent 50%);
-    font-weight: 700;
+    background-color: color-mix(in srgb, var(--c-3), transparent 65%);
+    font-weight: 600;
     padding: 0.2rem;
     height: fit-content;
     text-wrap: nowrap;
@@ -176,7 +176,7 @@
 .dots-container {
     display: flex;
     justify-content: space-between;
-    padding-top: 4%;
+    padding-top: 6%;
 }
 
 .dots-container span {
@@ -189,12 +189,6 @@
 
 /*Media queries*/
 
-@media (min-width: 1280px) {}
-
-@media (min-width: 1024px) {}
-
-
-@media (max-width: 1024px) {}
 
 @media (max-width: 768px) {
     .notes {
@@ -203,6 +197,7 @@
 
     .notes-index {
         padding-top: 14%;
+        padding-bottom: 50px;
     }
 
     .header-notes {
@@ -236,7 +231,7 @@
 
     .tnd {
         flex-direction: column-reverse;
-        gap: 0.4rem;
+        gap: 12px;
     }
 
     .ant::before,
