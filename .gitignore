@@ -1,0 +1,12 @@
+# Ignorar archivos de diseño originales
+*.psd
+*.ai
+
+# Ignorar carpetas de respaldo o temporales
+/backup/
+/test/
+.DS_Store
+.gitignore
+Notas.md
+prueba 2.html
+prueba.html

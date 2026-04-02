@@ -688,6 +688,7 @@ footer {
   animation: quoteTriangle 800ms linear infinite;
 }
 
+.link-nav-home,
 #bckgMenu,
 #iconsMenu,
 #hambuMenu,
@@ -699,7 +700,7 @@ footer {
 }
 
 body.no-scroll {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 /* --- Media Queries --- */
@@ -711,10 +712,16 @@ body.no-scroll {
 }
 
 @media (max-width: 768px) {
-.no-scroll {
-  overflow: hidden;
-}
+  .no-scroll {
+    overflow: hidden;
+  }
+
   /* Mostrar elementos de control móvil */
+  .link-nav-home {
+    display: block;
+  }
+
+
   #iconsMenu,
   #hambuMenu,
   #closeMenu,
@@ -756,18 +763,20 @@ body.no-scroll {
   .links-nav.menuAnimation {
     transition: opacity 0.25s ease;
   }
-  
+
   .links-nav.showMenu {
-    opacity: 1;    
+    opacity: 1;
   }
 
   .links-nav.menuAnimation {
-  transition-delay: 0.2s; /* salida */
-}
+    transition-delay: 0.2s;
+    /* salida */
+  }
 
-.links-nav.menuAnimation.showMenu {
-  transition-delay: 0s; /* entrada */
-}
+  .links-nav.menuAnimation.showMenu {
+    transition-delay: 0s;
+    /* entrada */
+  }
 
   .menuItems {
     margin-top: 15%;
@@ -775,6 +784,7 @@ body.no-scroll {
     transform: rotate(2deg);
     transition: transform 0.25s ease;
     transition-delay: 0.1s;
+
   }
 
   .menuItems.active {
@@ -799,7 +809,6 @@ body.no-scroll {
     align-items: center;
     justify-content: center;
     gap: 20px;
-
     background-color: var(--c-4);
     text-align: center;
   }
@@ -832,8 +841,8 @@ body.no-scroll {
     position: absolute;
     width: 76%;
     height: 65%;
-    max-height: 515px;
-    margin-top: 18%;
+    max-height: 600px;
+    margin-top: 23%;
     background-color: var(--c-3);
     transform: rotate(-2deg);
     z-index: -1;
@@ -851,8 +860,8 @@ body.no-scroll {
 
 @media (max-width: 480px) {
   .bckgNavList {
-    height: 55%;
-    max-height: 440px;
+    height: 58%;
+    max-height: 600px;
   }
 }
 
