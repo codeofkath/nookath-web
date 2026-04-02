@@ -1,7 +1,6 @@
 .notes {
     width: clamp(300px, 90%, 800px);
     background-color: #F2E8DE;
-    min-height: 570px;
 }
 
 .notes-tabs {
@@ -55,8 +54,8 @@
     border: 2px solid var(--c-3);
     border-top: none;
     z-index: 7;
-    padding: 8% 3.8rem;
-
+    padding: 8% 8%;
+    min-height: 500px;
     gap: 2rem;
 }
 
@@ -73,11 +72,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 3vh;
+    margin-bottom: 2vh;
 }
 
 .p-desc {
-    width: 80%;
+    width: 77%;
     text-align: right;
 }
 
@@ -86,19 +85,15 @@
 }
 
 
-
 .notes-content li {
     border-bottom: 2px solid var(--c-3);
 }
 
-
 .note-entry article {
     width: 100%;
     gap: 0.5rem;
-
     padding: 0.8rem 0;
     padding-bottom: 2rem;
-
 }
 
 .kpr {
@@ -114,9 +109,10 @@
 }
 
 .tnd {
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .tnd a {
@@ -131,10 +127,12 @@
 
 
 .date {
+    text-align: center;
     background-color: color-mix(in srgb, var(--c-3), transparent 50%);
     font-weight: 700;
     padding: 0.2rem;
     height: fit-content;
+    text-wrap: nowrap;
 }
 
 .load-m {
@@ -188,4 +186,64 @@
     border: 2px solid var(--c-3);
     border-radius: 50%;
     background-color: transparent;
+}
+
+/*Media queries*/
+
+@media (min-width: 1280px) {}
+
+@media (min-width: 1024px) {}
+
+
+@media (max-width: 1024px) {}
+
+@media (max-width: 768px) {
+    .notes {
+        width: 100%;
+    }
+
+    .notes-index {
+        padding-top: 14%;
+    }
+
+    .header-notes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .p-desc {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .notes {
+        min-width: 255px;
+    }
+
+    .tab-s1 {
+        width: 6rem;
+    }
+
+    .tab-s2 {
+        width: 4.4rem;
+    }
+
+    .notes-index::before {
+        width: calc(100% - 5.7rem);
+    }
+
+    .tnd {
+        flex-direction: column-reverse;
+        gap: 0.4rem;
+    }
+
+    .ant::before, .desp:after {
+    width: 2.1rem;
+
+}
+
+
 }
