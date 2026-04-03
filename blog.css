@@ -125,7 +125,7 @@
 
 
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
 
     .iconCategoryMenu,
     #TittleCatMenu {
@@ -141,11 +141,11 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-bottom: 20px;
+
     }
 
     .blg-dscp {
-        width: 90%;
+        width: 60%;
         border-left: none;
     }
 
@@ -160,12 +160,16 @@
         flex-direction: row;
         margin: 6% 0;
         justify-content: space-between;
-        padding: 6% 5%;
+
         flex-grow: 0;
     }
 
     .subcol {
         width: 47%;
+    }
+
+    .dscp {
+        width: 70%;
     }
 
     .category-icon {
@@ -191,7 +195,7 @@
 
     .bckgCategories {
         position: fixed;
-        inset:0;
+        inset: 0;
         width: 100%;
         height: 100vh;
         background: var(--gl) 0px 0px / 8px 8px, var(--gl) 4px 4px / 8px 8px, color-mix(in srgb, var(--c-1), transparent 40%);
@@ -232,7 +236,7 @@
     #buttonCloseCat {
         position: absolute;
         top: -3%;
-        right: -4%;
+        right: -14px;
         border: none;
         width: 40px;
         height: 40px;
@@ -255,8 +259,6 @@
     .categories-block svg {
         width: 25px;
         min-height: 30px;
-        margin: 0;
-        padding: 0;
     }
 
 
@@ -295,4 +297,18 @@
 }
 
 
-@media (max-width: 480px) {}
+@media (max-width: 768px) {
+    .dscp {
+        width: 90%;
+    }
+
+    .blg-dscp {
+        width: 87%;
+        border-left: none;
+    }
+
+    .blg-categories {
+        padding: 5%;
+    }
+
+}
